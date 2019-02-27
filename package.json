@@ -1,0 +1,25 @@
+{
+  "name": "online_labels_ol996_princexml",
+  "version": "1.0.0",
+  "description": "Online Labels OL996 template for PrinceXML",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "pdf": "rm -f docs\\ol996.pdf && prince docs\\ol996.html -o docs\\ol996.pdf",
+    "reshow": "ps -W | awk '/AcroRd32.exe/,NF=1' | xargs kill -f && rm -f docs\\ol996.pdf && prince docs\\ol996.html -o docs\\ol996.pdf && start \"\" docs/ol996.pdf",
+    "reshow-v1": "ps -W | awk '/AcroRd32.exe/,NF=1' | xargs kill -f && rm -f docs\\vanilla1.pdf && prince docs\\vanilla1.html -o docs\\vanilla1.pdf && start \"\" docs/vanilla1.pdf",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneCypher/online_labels_ol996_princexml.git"
+  },
+  "author": "John Haugeland <stonecypher@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/online_labels_ol996_princexml/issues"
+  },
+  "homepage": "https://github.com/StoneCypher/online_labels_ol996_princexml#readme"
+}
