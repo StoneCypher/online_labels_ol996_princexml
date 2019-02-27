@@ -8,8 +8,8 @@
   },
   "scripts": {
     "pdf": "rm -f docs\\ol996.pdf && prince docs\\ol996.html -o docs\\ol996.pdf",
-    "reshow": "ps -W | awk '/AcroRd32.exe/,NF=1' | xargs kill -f && rm -f docs\\ol996.pdf && prince docs\\ol996.html -o docs\\ol996.pdf && start \"\" docs/ol996.pdf",
-    "reshow-v1": "ps -W | awk '/AcroRd32.exe/,NF=1' | xargs kill -f && rm -f docs\\vanilla1.pdf && prince docs\\vanilla1.html -o docs\\vanilla1.pdf && start \"\" docs/vanilla1.pdf",
+    "reshow": "ps -W | awk '/AcroRd32.exe/,NF=1' | xargs kill -f && rm -f docs\\ol996.pdf && prince docs\\ol996.html -o docs\\ol996.pdf --javascript && start \"\" docs/ol996.pdf",
+    "reshow-v1": "ps -W | awk '/AcroRd32.exe/,NF=1' | xargs kill -f && rm -f docs\\vanilla1.pdf && prince docs\\vanilla1.html -o docs\\vanilla1.pdf --javascript && start \"\" docs/vanilla1.pdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -6,8 +6,90 @@
     <link rel="stylesheet" type="text/css" href="vanilla.css"/>
 
     <script type="text/javascript">
-      function test() { document.getElementById('tgt').innerHTML = 'poop'; }
-      Prince.addEventListener("complete", test, false);
+
+      var OrangePeachRasp = {
+        title: 'Orange Peach Raspberry'
+      };
+
+      var Ukrainian = {
+        title: 'Ukrainian Madagascar'
+      };
+
+      var Russian = {
+        title: 'Russian Madagascar'
+      };
+
+      var Chocolate = {
+        title: 'Dry Chocolate'
+      };
+
+      var Ukrainian25 = {
+        title: 'Ukrainian 2.5-Fold XX'
+      };
+
+      var Kahlua = {
+        title: 'Dry Kahlua'
+      };
+
+      var Galliano = {
+        title: 'Yarrow Anisette'
+      };
+
+      var Coffee = {
+        title: 'Caffé Vanilla'
+      };
+
+      var Peach = {
+        title: 'Peach Rum'
+      };
+
+
+
+      var data = [
+        [ OrangePeachRasp, Ukrainian   ],
+        [ Russian,         Ukrainian   ],
+        [ Chocolate,       Ukrainian25 ],
+        [ Kahlua,          Galliano    ],
+        [ Coffee,          Peach       ]
+      ];
+
+
+
+      function build() {
+
+        var tgt = document.getElementById('tgt');
+
+        data.map(function(rowData) {
+
+          var row = document.createElement('tr');
+          rowData.map(function(cellData) {
+
+            var cell    = document.createElement('td'),
+                host    = document.createElement('div'),
+                title   = document.createElement('span'),
+                cursive = document.createElement('span');
+
+            title.innerHTML = cellData.title;
+            title.className = 'title';
+
+            cursive.innerHTML = 'John\'s Vanilla Extract';
+            cursive.className = 'cursive';
+
+            [title, cursive].map(function(el) {
+              host.appendChild(el);
+            });
+
+            cell.appendChild(host);
+            row.appendChild(cell);
+
+          });
+
+          tgt.appendChild(row);
+
+        });
+
+      }
+
     </script>
 
   </head>
@@ -16,12 +98,11 @@
      Keep in the cool, in the dark, like wine.  Never refrigerate.  Do not
      feed after midnight.  Bottled with angst.  Stop reading; they're watching. -->
 
-  <body>
-
-    <div id="tgt"></div>
+  <body onload="build()">
 
     <table class="showCuts">
-
+      <tbody id="tgt">
+<!--
       <tr>
         <td>
           <span class="title">Orange Peach Raspberry</span>
@@ -88,7 +169,8 @@
         </td>
 
       </tr>
-
+-->
+      </tbody>
     </table>
 
   </body>
