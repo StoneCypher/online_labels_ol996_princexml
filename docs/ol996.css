@@ -5,6 +5,9 @@
 @prince-pdf       { prince-pdf-open-action: zoom(fit-page); }
 @page             { size: 8.5in 11in; margin: 0; padding: 0; border: 0; }
 html, body        { margin: 0; padding: 0; border: 0; }
+body              { background-image: url("light-wood-bg.png"); background-size: cover; }
 table             { border-collapse: separate; border-spacing: 0.125in; margin: 0.125in 0 0 1.1875in; }
-td                { width: 3in; height: 2in; border: 1px solid transparent; border-radius: 0.125in; vertical-align: top; }
 table.showCuts td { border-color: black; }
+td                { position: relative; width: 3in; height: 2in; border: 1px solid transparent; border-radius: 0.125in; vertical-align: top; }
+.title            { position: absolute; top: 1em; left: 1em; font-size: 110%; font-family: signika; font-weight: bold; }
+.cursive          { position: absolute; bottom: 0.25em; left: 0.65em; font-family: "Miss Fajardose"; font-size: 275%; }
