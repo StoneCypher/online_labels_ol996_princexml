@@ -2,45 +2,69 @@
 <html>
 
   <head>
+
     <link rel="stylesheet" type="text/css" href="ol996.css"/>
     <link rel="stylesheet" type="text/css" href="vanilla.css"/>
 
     <script type="text/javascript">
 
       var OrangePeachRasp = {
-        title: 'Orange Peach Raspberry'
+        title: 'Orange Peach Raspberry',
+        color: 'd0499a',
+        sugar: 1.09,
+        text : 'Built on <b>Grand Mariner Signature #2</b> cognac, flavored with peach, raspberry, bitter orange zest, and oak barrel.'
       };
 
       var Ukrainian = {
-        title: 'Ukrainian Madagascar'
+        title: 'Ukrainian Madagascar',
+        color: '8e4b21',
+        sugar: 0
       };
 
       var Russian = {
-        title: 'Russian Madagascar'
+        title: 'Russian Madagascar',
+        color: '8e4b21',
+        sugar: 0
       };
 
       var Chocolate = {
-        title: 'Dry Chocolate'
+        title: 'Dry Chocolate',
+        color: 'a33c23',
+        sugar: 0
       };
 
       var Ukrainian25 = {
-        title: 'Ukrainian 2.5-Fold XX'
+        title: 'Ukrainian 2.5-Fold XX',
+        xx   : true,
+        color: '894419',
+        sugar: 0
       };
 
       var Kahlua = {
-        title: 'Dry Kahlua'
+        title    : 'Dry Kahlua',
+        color    : '5e2012',
+        sugar    : 0,
+        caffeine : 0.15
       };
 
       var Galliano = {
-        title: 'Yarrow Anisette'
+        title: 'Yarrow Anisette',
+        color: 'ffff00',
+        sugar: 1.81
       };
 
       var Coffee = {
-        title: 'Caffé Vanilla'
+        title    : 'Caffé Vanilla',
+        color    : '552c13',
+        sugar    : 0,
+        caffeine : 0.15
       };
 
       var Peach = {
-        title: 'Peach Rum'
+        title: 'Peach Rum',
+        color: 'f7b8a2',
+        img  : 'cruzan-peach.png',
+        sugar: 1.1
       };
 
 
@@ -55,6 +79,35 @@
 
 
 
+      function makeTitle(text, color) {
+
+        return (
+          '<svg height="0.22in" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><text style="fill: #'
+          + (color || 'ace')
+          + '; stroke: #000000; stroke-width: 0.03em;">'
+          + text
+          + '</text></svg>'
+        );
+
+      }
+
+
+
+      function makeSubtitle(cellData) {
+
+        return (
+
+            (cellData.xx? 'Extra Strong (2.5 fold)' : 'Strong (1.25 fold)')
+          + (' &nbsp; &nbsp; ')
+          + (cellData.sugar === 0? 'Zero sugar' : (cellData.sugar.toFixed(1) + ' grams sugar / tsp'))
+          + (' &nbsp; &nbsp; ')
+          + (cellData.caffeine? (cellData.caffeine.toFixed(2) + ' mg caffeine / tsp') : '')
+
+        );
+      }
+
+
+
       function build() {
 
         var tgt = document.getElementById('tgt');
@@ -64,18 +117,36 @@
           var row = document.createElement('tr');
           rowData.map(function(cellData) {
 
-            var cell    = document.createElement('td'),
-                host    = document.createElement('div'),
-                title   = document.createElement('span'),
-                cursive = document.createElement('span');
+            var cell       = document.createElement('td'),
+                host       = document.createElement('div'),
+                title      = document.createElement('span'),
+                text       = document.createElement('span'),
+                image      = document.createElement('img'),
+                subtitle   = document.createElement('span'),
+                cursive    = document.createElement('span'),
+                subcursive = document.createElement('span');
 
-            title.innerHTML = cellData.title;
-            title.className = 'title';
+            title.innerHTML      = makeTitle(cellData.title, cellData.color);
+            title.className      = 'title';
 
-            cursive.innerHTML = 'John\'s Vanilla Extract';
-            cursive.className = 'cursive';
+            subtitle.innerHTML   = makeSubtitle(cellData);
+            subtitle.className   = 'subtitle';
 
-            [title, cursive].map(function(el) {
+            cursive.innerHTML    = 'John\'s Vanilla Extract';
+            cursive.className    = 'cursive';
+
+            text.innerHTML       = cellData.text || '';
+            text.className       = 'text';
+
+            image.src            = cellData.img || '';
+            image.className      = 'bottle';
+
+            subcursive.innerHTML = 'Bottled Feb 26, 2020.  Best from March 2021 to March 2023.';
+            subcursive.className = 'subcursive';
+
+            host.className       = 'host';
+
+            [title, subtitle, cursive, subcursive, text, image].map(function(el) {
               host.appendChild(el);
             });
 
