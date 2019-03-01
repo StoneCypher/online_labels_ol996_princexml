@@ -6,13 +6,36 @@
 @page             { size: 8.5in 11in; margin: 0; padding: 0; border: 0; }
 html, body        { margin: 0; padding: 0; border: 0; }
 body              { background-image: url("light-wood-bg.png"); background-size: cover; }
-table             { border-collapse: separate; border-spacing: 0.125in; margin: 0.125in 0 0 1.1875in; }
-table.showCuts td { border-color: black; }
-td                { position: relative; width: 3in;    height: 2in;    border: 1px solid transparent; border-radius: 0.125in; vertical-align: top; }
+
+/*
+Template Specifications
+Description:  OL996 - 3" x 2" template provided free to customers of OnlineLabels.com.
+Sheet Size: 8.5" x 11" Sheet  Labels Per Sheet: 10
+Width: 3"
+Height: 2"
+Top Margin: 0.25"
+Bottom Margin: 0.25"
+Left Margin: 1.1875"
+Right Margin: 1.1875"
+Horizontal Spacing: 0.125"
+Vertical Spacing: 0.125"
+Horizontal Pitch: 3.125"
+Vertical Pitch: 2.125"
+*/
+
+
+
+table             { border-collapse: separate; border-spacing: 0.125in; margin: 0.125in 0 0 1.0625in; }
 .host             { position: absolute; width: 2.75in; height: 1.75in; top: 0.125in; left: 0.125in; }
+
+td                { position: relative; width: 3in; height: 2in; vertical-align: top; border: 0; }
 .title            { position: absolute; top: 0; left: 0; font-size: 110%; font-family: signika; font-weight: bold; }
 .subtitle         { position: absolute; top: 3.4em; left: 0; font-family: "Raleway"; font-size: 40%; }
 .text             { position: absolute; top: 4em; left: 0; font-family: "Raleway"; font-size: 70%; max-width: 2.2in; }
+.text.narrow      { max-width: 1.8in; }
+.text.wide        { max-width: 2.3in; }
 .bottle           { position: absolute; right: 0; top: 0; max-height: 100%; }
 .cursive          { position: absolute; bottom: 0.1em; left: 0.2em; font-family: "Miss Fajardose"; font-size: 200%; }
 .subcursive       { position: absolute; bottom: 0.5em; left: 4.2em; font-family: "Raleway"; font-size: 35.5%; }
+
+table.showCuts td { border-color: black; border: 1px solid transparent; border-radius: 0.125in; }

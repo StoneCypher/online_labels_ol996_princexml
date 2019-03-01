@@ -13,7 +13,7 @@
         color: 'd0499a',
         sugar: 1.09,
         img  : 'grand-mariner-no-2.png',
-        text : 'Built on <b>Grand Mariner Signature #2</b> cognac, flavored with peach, raspberry, bitter orange zest, and oak barrel.'
+        text : 'Built on <b>Grand Mariner Signature #2</b> cognac, flavored with peach, raspberry, bitter orange zest, and oak barrel.<br/>Strong fruit flavors with a clear aged<br/>grape basis.'
       };
 
       var Ukrainian = {
@@ -21,7 +21,7 @@
         color: '8e4b21',
         img  : 'nemiroff.png',
         sugar: 0,
-        text : 'Built on <b>Nemiroff</b> Ukrainian wheat vodka, this is the cleanest vanilla in the set, with less inherent flavor overtone than corn vodkas.'
+        text : 'Built on <b>Nemiroff</b> Ukrainian wheat vodka, this is the cleanest vanilla in the set, with less inherent flavor overtone than corn vodkas.   Well suited to almost any use.'
       };
 
       var Russian = {
@@ -29,7 +29,7 @@
         color: '8e4b21',
         img  : 'smirnoff.png',
         sugar: 0,
-        text : 'Built on <b>Smirnoff #21</b> Russian corn vodka, this is as classic as Madagascar vanilla extract gets.  This is the vanilla we\'ve all grown up with.'
+        text : 'Built on <b>Smirnoff #21</b> Russian corn vodka, this is as classic as Madagascar vanilla extract gets; the vanilla we\'ve grown up with.  Well suited to almost any use.'
       };
 
       var Chocolate = {
@@ -37,7 +37,7 @@
         color: 'a33c23',
         img  : 'chocolate.png',
         sugar: 0,
-        text : 'Built on <b>Tanzanian Kokoa<br/>Kamili</b> roasted cocoa nibs from<br/><b>Dandelion</b> and <b>Nemiroff</b> vodka.'
+        text : 'Built on <b>Tanzanian Kokoa<br/>Kamili</b> roasted cocoa nibs from<br/><b>Dandelion</b> and <b>Nemiroff</b> vodka,<br/>to make a cocoa toned vanilla.<br/>Suited to coffee, water, dairy, &amp; fruit.'
       };
 
       var Ukrainian25 = {
@@ -45,7 +45,8 @@
         xx   : true,
         color: '894419',
         img  : 'nemiroff.png',
-        sugar: 0
+        sugar: 0,
+        text : 'Built on <b>Nemiroff</b> Ukrainian wheat vodka at 2.5× standard strength, this is best used at half volume in baked goods.  This produces many otherwise lost flavors from vanilla, and can easily overpower.'
       };
 
       var Kahlua = {
@@ -53,14 +54,18 @@
         color    : '5e2012',
         sugar    : 0,
         img      : 'kahlua-narrow.png',
-        caffeine : 0.15
+        caffeine : 0.15,
+        narrow   : true,
+        text     : 'Built on <b>Nemiroff</b> and <b>Mount Gay</b>, this vanilla has also been cured with <b>Ritual</b> coffee and <b>dandelion</b> chocolate, to create a zero-sugar kahlua toned vanilla.'
       };
 
       var Galliano = {
         title: 'Yarrow Anisette',
         color: 'ffff00',
         img  : 'galliano.png',
-        sugar: 1.81
+        sugar: 1.81,
+        wide : true,
+        text : 'Built on <b>Galliano</b> Tuscan Italian aperitif, this traditional herbal vanilla digestif adds star and Mediterranean anise, juniper, lavender, yarrow, peppermint, cinnamon, and caramel.  Curious in drinks and baking.'
       };
 
       var Coffee = {
@@ -68,24 +73,85 @@
         color    : '552c13',
         sugar    : 0,
         img      : 'coffee.png',
-        caffeine : 0.15
+        caffeine : 0.15,
+        narrow   : true,
+        text     : 'Built on <b>Espresso Roast</b> from <b>Ritual Coffee</b> and <b>Nemiroff</b>, this caffé vanilla imparts strong coffee notes with warm fruit undertones.'
       };
 
       var Peach = {
-        title: 'Peach Rum',
+        title: 'Peach Molasses Rum',
         color: 'f7b8a2',
         img  : 'cruzan-peach.png',
-        sugar: 1.1
+        sugar: 1.1,
+        text : 'Built on <b>Cruzan Peach Rum</b>, a St Croix five-column molasses rum, this mild peach flavor adds a subtle warmth, and pairs especially well with chocolates, dairy, mixed fruit, and breads.'
+      };
+
+      var CitrusBrandy = {
+        title: 'Citrus Brandy',
+        color: 'b5ff2d',
+        img  : 'tuaca.png',
+        sugar: 0.7,
+        text : 'Built on <b>Tuaca</b>, a Firenze Italian blended brandy recipe spiced with lime, lemon, cinnamon, and vanilla, this smooth casked Kentucky brandy shines in dairy.'
+      };
+
+      var Bourbon = {
+        title: 'Bourbon',
+        color: 'ff3ad1',
+        img  : 'four-roses.png',
+        sugar: 0,
+        text : 'Built on <b>Four Roses Single Barrel</b>, a Kentucky straight bourbon whiskey.  Bourbon beans are not related to bourbon whiskey; still, the two flavors pair as if made for one another.'
+      };
+
+      var Amaretto = {
+        title : 'Amaretto',
+        color : 'e55400',
+        img   : 'disaronno.png',
+        sugar : 1.9,
+        narrow: true,
+        text  : 'Built on <b>DiSaronno</b>, a roast apricot pit herbal amaretto.  This bottle is technically not vanilla extract, as the alcohol content is too low (28%, vs 35% required.)'
+      };
+
+      var Rum = {
+        title: 'Rum',
+        color: 'efc700',
+        img  : 'mount-gay.png',
+        sugar: 0,
+        text : 'Built on <b>Mount Gay XO Single Barrel</b>,<br/>a Barbados dry unspiced rum blend<br/>of four rums aged between eight<br/>and fifteen years.  Well suited to fruits, desserts, and mixed drinks.'
+      };
+
+      var Scotch = {
+        title: 'Scotch',
+        color: '404040',
+        img  : 'octomore.png',
+        sugar: 0,
+        text : 'Built on <b>Bruichladdich Octomore 07.1</b>, a heavily peated Islay malt scotch.  Smoke flavor so pronounced that you can chew it.  Wild presence in dairy and candies.  Superb in coffee.'
+      };
+
+      var Orange = {
+        title: 'Orange Cognac',
+        color: 'ff9f68',
+        img  : 'grand-mariner.png',
+        sugar: 1.0,
+        text : 'Built on <b>Grand Mariner Cordon Rouge</b>,<br/>a bitter orange zested French cognac.  Well paired with cherries, cranberries,<br/>in crêpes Suzette, soufflé, crème<br/>brûlée, flambé, yulë log, and duck.'
       };
 
 
 
+/*
       var data = [
         [ OrangePeachRasp, Ukrainian   ],
         [ Russian,         Ukrainian   ],
         [ Chocolate,       Ukrainian25 ],
         [ Kahlua,          Galliano    ],
         [ Coffee,          Peach       ]
+      ];
+*/
+      var data = [
+        [ Amaretto,        Ukrainian   ],
+        [ Rum,             Ukrainian   ],
+        [ Scotch,          Orange      ],
+        [ Bourbon,         Ukrainian   ],
+        [ CitrusBrandy,    Ukrainian   ]
       ];
 
 
@@ -147,7 +213,8 @@
             cursive.className    = 'cursive';
 
             text.innerHTML       = cellData.text || '';
-            text.className       = 'text';
+            text.className       = cellData.narrow? 'narrow text' :
+                                  (cellData.wide?   'wide text'   : 'text');
 
             image.src            = cellData.img || '';
             image.className      = 'bottle';
